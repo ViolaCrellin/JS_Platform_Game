@@ -4,6 +4,8 @@ var actorChars = {
   "=": Lava, "|": Lava, "v": Lava
 };
 
+var playerXSpeed = 7;
+
 function Player(pos) {
   this.pos = pos.plus(new Vector(0, -0.5));
   this.size = new Vector(0.8, 1.5);
@@ -12,7 +14,7 @@ function Player(pos) {
 
 Player.prototype.type = "player";
 
-var playerXSpeed = 7;
+
 
 Player.prototype.moveX = function(step, level, keys) {
   this.speed.x = 0;

@@ -1,4 +1,4 @@
-var pos = 1
+
 
 function elt(name, className) {
   var elt = document.createElement(name);
@@ -62,7 +62,6 @@ DOMDisplay.prototype.scrollPlayerIntoView = function() {
     var left = this.wrap.scrollLeft, right = left + width;
     var top = this.wrap.scrollTop, bottom = top + height;
     var player = this.level.player;
-    debugger
     var center = player.pos.plus(player.size.times(0.5))
                 .times(scale);
 

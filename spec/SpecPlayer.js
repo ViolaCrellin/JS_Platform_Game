@@ -1,4 +1,4 @@
-describe("Actors", function() {
+describe("Player", function() {
   var vector;
   var player;
   var obstacle;
@@ -15,7 +15,7 @@ describe("Actors", function() {
     };
   });
 
-  describe("Player", function(){
+  describe("#Constructor", function(){
 
     it("has position, size and speed properties with vector objects", function(){
       expect(typeof player.pos).toEqual("object");

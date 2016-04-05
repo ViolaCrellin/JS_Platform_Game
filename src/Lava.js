@@ -13,12 +13,13 @@ function Lava(pos, ch){
 
 Lava.prototype.act = function(step, level) {
   var newPos = this.pos.plus(this.speed.times(step));
-  if (!level.obstacleAt(newPos, this.size))
+  if (!level.obstacleAt(newPos, this.size)) {
     this.pos = newPos;
-  else if (this.repeatPos)
+  } else if (this.repeatPos) {
     this.pos = this.repeatPos;
-  else
+  } else {
     this.speed = this.speed.times(-1);
+  }
 };
 
 Lava.prototype.type = "lava";
